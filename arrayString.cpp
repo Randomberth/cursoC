@@ -4,29 +4,36 @@
 using namespace std;
 int main()
 {
-    int vector1[10] = {32, 11, 22, 33, 44, 55, 66, 77, 88, 99};
-    string vector2[5] = {
-        "Keysi",
-        "Eva",
-        "Venesia",
-        "Franyeli",
-        "Giselle"};
+    string persona[10] = {};
+    int sumav[5] = {11, 22, 33, 44, 55};
+    int resp = 0;
 
+    // ingresar datos array
     for (int i = 0; i < 5; i++)
     {
-        if (i == 0)
-        {
-            printf("\n");
-            printf("    el valor en la posición %d es %s", i, vector2[i].c_str());
-            printf("\n");
-        }
-        else
-        {
-            printf("    el valor en la posición %d es %s", i, vector2[i].c_str());
-            printf("\n");
-        }
+        cout << "    Ingrese datos de la " << i << " persona : ";
+        cin >> persona[i];
     }
+
     printf("\n");
+    // mostrar datos
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "    persona " << i << " es : " << persona[i] << endl;
+    }
+
+    printf("\n");
+
+    // sumar vector
+    // mostrar datos
+    for (int i = 0; i < 5; i++)
+    {
+        resp = sumav[i] + resp;
+        //        cout << "    persona " << i << " es : " << persona[i] << endl;
+    }
+
+    printf("\n");
+    printf("    resultado suma : %d", resp);
 
     return (0);
 }
