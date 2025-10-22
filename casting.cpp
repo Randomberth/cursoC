@@ -10,5 +10,7 @@ int main()
     string test_string = "25";
 
     cout << " test casteo : " << ((float)test_int / 2);
+    cout << "\n";
+    printf(" test casteo : %.2f", ((float)test_int / 2));
     return (0);
 }
