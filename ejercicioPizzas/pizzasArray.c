@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
         // printf("%.2f  %.2f \n", array_redondas[i], aux_num_redondas);
     }
     printf("\n");
-    ////////////////////// calculo area cuadradas////////////////
+    ////////////////////// calculo area rectangulares ////////////////
     printf("    Cuantas pizzas rectangulares desea calcular? (maximo 7) : ");
     scanf("%d", &num_rectangulares);
     printf("\n");
