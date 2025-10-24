@@ -62,9 +62,19 @@ int main(int argc, char *argv[])
         aux_num_rectangulares += array_rectangulares[i];
         //        printf("%.2f  %.2f \n", array_rectangulares[i], aux_num_rectangulares);
     }
+
     printf("\n");
     printf("    El area total de las pizzas redondas es      : %.2f \n", aux_num_redondas);
     printf("    El area total de las pizzas rectangulares es : %.2f \n", aux_num_rectangulares);
+
+    if (aux_num_rectangulares < aux_num_redondas)
+    {
+        printf("\n    El area total de las pizzas redondas es superior");
+    }
+    else
+    {
+        printf("\n    El area total de las pizzas rectangulares es superior");
+    }
 
     return (0);
 }
