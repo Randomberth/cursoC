@@ -21,11 +21,7 @@ int main()
     scanf("%hu", &op);
     printf("\n");
 
-    /*printf("\n \n");
-    printf("    La opción elegida es : %c", op);
-    printf("\n \n");*/
-
-    switch (op)
+        switch (op)
     {
     case 1:
         printf("    Operación SUMA \n \n");

@@ -16,7 +16,7 @@ void cambiar(char palabra[]);
 int main(int argc, char *argv[])
 {
     char cadena[12], receptora[12], concatena[25];
-    int x = 0;
+    int x = 0, igual = 0;
 
     x = 9;
 
@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 
     cambiar(cadena);
     strcpy(receptora, cadena);
+
     printf("\n");
     printf("    La cadena es : %c. \n", cadena[3]);
     printf("\n");
@@ -32,6 +33,7 @@ int main(int argc, char *argv[])
     printf("Ingrese la frase o palabra a concatenar :");
     fgets(concatena, 25, stdin);
     cambiar(concatena);
+    igual = strcmp(cadena, concatena);
     strcat(concatena, cadena);
 
     printf("\n");
@@ -41,6 +43,10 @@ int main(int argc, char *argv[])
     printf("\n");
     printf("la cadena concatenada contiene : %s ", concatena);
     printf("\n");
+    if (igual == 0)
+        printf("las cadenas son iguales");
+    else
+        printf("las cadenas son DESiguales");
 
     return (0);
 }
