@@ -69,11 +69,11 @@ int main(int argc, char *argv[])
 
     if (aux_num_rectangulares < aux_num_redondas)
     {
-        printf("\n    El area total de las pizzas redondas es superior");
+        printf("\n    El area total de las pizzas REDONDAS es mayor \n \n");
     }
     else
     {
-        printf("\n    El area total de las pizzas rectangulares es superior");
+        printf("\n    El area total de las pizzas RECTANGULARES es mayor \n \n");
     }
 
     return (0);
