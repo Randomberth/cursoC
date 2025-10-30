@@ -35,7 +35,7 @@ public:
     }
 
     // métodos extra
-    void presentarse()
+    virtual void presentarse()
     {
         cout << "mi nombre es " << nombre << " y tengo " << edad << " anios" << endl;
     }
@@ -62,26 +62,27 @@ public:
         return materia;
     }
 
-    void testObjeto4()
+    virtual void presentarse()
     {
-        cout << "clase Nº " << clase << " materia : " << materia << " anios" << endl;
+        cout << "mi nombre es " << nombre << " y tengo " << edad << " anios y estoy en la clase Nº " << clase << " materia : " << materia << endl;
+        // cout << "mi nombre es " << nombre << " y tengo " << edad << " y estoy en la clase Nº ";
     }
 };
 
 int main()
 {
     // crear objeto
-    Persona p1("Aliberth", 21);
-    Persona p2 = Persona("Carlos", 30);
-    Persona p3 = Persona("Keysy", 25);
-    Profesor p4 = Profesor("Henjiskan", 33, 5, "matematica");
+    Persona *p1 = new Persona("Aliberth", 21);
+    Persona *p2 = new Persona("Carlos", 30);
+    Persona *p3 = new Persona("Keysy", 25);
+    Profesor *p4 = new Profesor("Henjiskan", 33, 5, "matematica");
 
-    Persona arrayPersona[] = {p1, p2, p3, p4};
+    Persona *arrayPersona[] = {p1, p2, p3, p4};
 
     for (int i = 0; i < 4; i++)
     {
         cout << "\n";
-        arrayPersona[i].presentarse();
+        arrayPersona[i]->presentarse();
         ///        arrayPersona[i].
     }
     cout << "\n";
