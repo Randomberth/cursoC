@@ -48,7 +48,7 @@ int main()
 {
     char name[80];
     char lastname[80];
-    FILE *fpw;
+//    FILE *fpw;
 
     printf("\n");
     printf("    Escoge un nombre!! : ");
