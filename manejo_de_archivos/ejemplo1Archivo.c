@@ -8,9 +8,9 @@ void imprimirArreglo(int array[], int tot)
     }
 }
 
-void guardarArray(FILE *op, int *array)
+void sumarEnArray(FILE *op, int *array)
 {
-    int total;
+    int total, valor;
     if (op == NULL)
     {
         printf("\n");
@@ -25,39 +25,29 @@ void guardarArray(FILE *op, int *array)
 
         for (int i = 0; i < total; i++)
         {
-            fscanf(op, "%d", &array[i]);
+            //            fscanf(op, "%d", (array + i));
+            fscanf(op, "%d", &valor);
+            array[i] += valor;
         }
+        fclose(op);
+        imprimirArreglo(array, total);
     }
 }
 
 int main()
 {
-    int arreglo[100] = {0}, total = 0;
+    int arreglo[100] = {0}, total0 = 0, total1 = 0, total2 = 0;
 
     FILE *fp0 = fopen("nota1.txt", "r");
     FILE *fp1 = fopen("nota2.txt", "r");
     FILE *fp2 = fopen("nota3.txt", "r");
 
-    if (fp0 == NULL)
-    {
-        printf("\n");
-        perror("    Open file");
-        //        return 1;
-    }
-    else
-    {
-        printf("\n");
-        perror("    Open file");
-        fscanf(fp0, "%d", &total);
+    sumarEnArray(fp0, arreglo);
 
-        for (int i = 0; i < total; i++)
-        {
-            fscanf(fp0, "%d", &arreglo[i]);
-        }
+    sumarEnArray(fp1, arreglo);
 
-        printf("\n");
-        imprimirArreglo(arreglo, total);
-    }
+    sumarEnArray(fp2, arreglo);
+
     printf("\n");
     return 0;
 }
